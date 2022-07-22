@@ -9,6 +9,7 @@ import time
 @pytest.fixture()
 def browser_config():
     global driver
+
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     print('Browser launch success.')
     driver.maximize_window()
